@@ -1,111 +1,72 @@
-NOVA — E-commerce Full Stack
+# NOVA — E-commerce Full Stack
 
-Projet e-commerce moderne inspiré de la maquette NOVA, avec une partie boutique client et un panel administrateur.
+Projet e-commerce moderne inspiré de la maquette **NOVA**, avec une partie **boutique client** et un **panel administrateur**.
 
-Stack technique
+## Stack technique
 
-Frontend
+### Frontend
+- React.js
+- HTML5 / JSX
+- CSS3
+- JavaScript ES6+
+- React Router
+- Axios
+- Context API ou Redux Toolkit
+- Lucide React / React Icons
 
-React.js
+### Backend
+- Node.js
+- Express.js
+- JWT
+- bcrypt
+- Multer
+- Nodemailer
+- express-validator
 
-HTML5 / JSX
+### Base de données
+- MySQL
+- mysql2
+- Sequelize ou requêtes SQL classiques
 
-CSS3
+---
 
-JavaScript ES6+
+# 1. Fonctionnalités principales
 
-React Router
+## Boutique client
+- Accueil
+- Nouveautés
+- Homme
+- Femme
+- Accessoires
+- Recherche
+- Fiche produit
+- Panier
+- Paiement / Checkout
+- Connexion
+- Inscription
+- Profil utilisateur
+- Mes commandes
+- Mes adresses
+- Mes favoris
+- Sécurité du compte
 
-Axios
+## Administration
+- Tableau de bord
+- Commandes
+- Produits
+- Catégories
+- Clients
+- Promotions
+- Analyses
+- Messages
+- Paramètres
+- Profil administrateur
 
-Context API ou Redux Toolkit
+---
 
-Lucide React / React Icons
+# 2. Structure générale du projet
 
-Backend
-
-Node.js
-
-Express.js
-
-JWT
-
-bcrypt
-
-Multer
-
-Nodemailer
-
-express-validator
-
-Base de données
-
-MySQL
-
-mysql2
-
-Sequelize ou requêtes SQL classiques
-
-1. Fonctionnalités principales
-
-Boutique client
-
-Accueil
-
-Nouveautés
-
-Homme
-
-Femme
-
-Accessoires
-
-Recherche
-
-Fiche produit
-
-Panier
-
-Paiement / Checkout
-
-Connexion
-
-Inscription
-
-Profil utilisateur
-
-Mes commandes
-
-Mes adresses
-
-Mes favoris
-
-Sécurité du compte
-
-Administration
-
-Tableau de bord
-
-Commandes
-
-Produits
-
-Catégories
-
-Clients
-
-Promotions
-
-Analyses
-
-Messages
-
-Paramètres
-
-Profil administrateur
-
-2. Structure générale du projet
-
+```text
 nova-ecommerce/
 │
 ├── client/
@@ -312,165 +273,69 @@ nova-ecommerce/
 │
 ├── .gitignore
 └── README.md
-
-3. Routes frontend
-
-Boutique
-
-Route
-
-Page
-
-/
-
-Accueil
-
-/nouveautes
-
-Nouveautés
-
-/homme
-
-Homme
-
-/femme
-
-Femme
-
-/accessoires
-
-Accessoires
-
-/recherche?q=
-
-Recherche
-
-/produit/:slug
-
-Détail produit
-
-/panier
-
-Panier
-
-/checkout
-
-Paiement
-
-/connexion
-
-Connexion
-
-/inscription
-
-Inscription
-
-/mot-de-passe-oublie
-
-Mot de passe oublié
-
-Compte client
-
-Route
-
-Page
-
-/mon-compte
-
-Profil
-
-/mon-compte/commandes
-
-Mes commandes
-
-/mon-compte/commandes/:id
-
-Détail commande
-
-/mon-compte/adresses
-
-Mes adresses
-
-/mon-compte/favoris
-
-Mes favoris
-
-/mon-compte/securite
-
-Sécurité
-
-Administration
-
-Route
-
-Page
-
-/admin
-
-Dashboard
-
-/admin/commandes
-
-Commandes
-
-/admin/commandes/:id
-
-Détails commande
-
-/admin/produits
-
-Produits
-
-/admin/produits/ajouter
-
-Ajouter produit
-
-/admin/produits/:id/modifier
-
-Modifier produit
-
-/admin/categories
-
-Catégories
-
-/admin/clients
-
-Clients
-
-/admin/clients/:id
-
-Détail client
-
-/admin/promotions
-
-Promotions
-
-/admin/promotions/ajouter
-
-Nouvelle promotion
-
-/admin/analyses
-
-Analyses
-
-/admin/messages
-
-Messages
-
-/admin/parametres
-
-Paramètres
-
-/admin/profil
-
-Profil admin
-
-4. Pages boutique
-
-Accueil
+```
+
+---
+
+# 3. Routes frontend
+
+## Boutique
+
+| Route | Page |
+|---|---|
+| `/` | Accueil |
+| `/nouveautes` | Nouveautés |
+| `/homme` | Homme |
+| `/femme` | Femme |
+| `/accessoires` | Accessoires |
+| `/recherche?q=` | Recherche |
+| `/produit/:slug` | Détail produit |
+| `/panier` | Panier |
+| `/checkout` | Paiement |
+| `/connexion` | Connexion |
+| `/inscription` | Inscription |
+| `/mot-de-passe-oublie` | Mot de passe oublié |
+
+## Compte client
+
+| Route | Page |
+|---|---|
+| `/mon-compte` | Profil |
+| `/mon-compte/commandes` | Mes commandes |
+| `/mon-compte/commandes/:id` | Détail commande |
+| `/mon-compte/adresses` | Mes adresses |
+| `/mon-compte/favoris` | Mes favoris |
+| `/mon-compte/securite` | Sécurité |
+
+## Administration
+
+| Route | Page |
+|---|---|
+| `/admin` | Dashboard |
+| `/admin/commandes` | Commandes |
+| `/admin/commandes/:id` | Détails commande |
+| `/admin/produits` | Produits |
+| `/admin/produits/ajouter` | Ajouter produit |
+| `/admin/produits/:id/modifier` | Modifier produit |
+| `/admin/categories` | Catégories |
+| `/admin/clients` | Clients |
+| `/admin/clients/:id` | Détail client |
+| `/admin/promotions` | Promotions |
+| `/admin/promotions/ajouter` | Nouvelle promotion |
+| `/admin/analyses` | Analyses |
+| `/admin/messages` | Messages |
+| `/admin/parametres` | Paramètres |
+| `/admin/profil` | Profil admin |
+
+---
+
+# 4. Pages boutique
+
+## Accueil
 
 Sections :
 
+```text
 Header
 ├── Bandeau livraison
 ├── Logo NOVA
@@ -504,9 +369,11 @@ Meilleures ventes
 └── ProductCard[]
 
 Footer
+```
 
-Nouveautés / Homme / Femme / Accessoires
+## Nouveautés / Homme / Femme / Accessoires
 
+```text
 Breadcrumb
 Titre
 Description
@@ -526,9 +393,11 @@ Tri
 
 ProductGrid
 Pagination
+```
 
-Fiche produit
+## Fiche produit
 
+```text
 Galerie images
 Informations produit
 ├── Nom
@@ -547,9 +416,11 @@ Livraison / Retour
 Description détaillée
 Avis clients
 Produits similaires
+```
 
-Panier
+## Panier
 
+```text
 Mon panier
 
 CartItems
@@ -569,9 +440,11 @@ Résumé
 └── Passer au paiement
 
 Produits recommandés
+```
 
-Checkout / Paiement
+## Checkout / Paiement
 
+```text
 1. Coordonnées
 ├── Email
 └── Téléphone
@@ -595,11 +468,15 @@ Checkout / Paiement
 
 Résumé de commande
 Bouton Confirmer et payer
+```
 
-5. Pages compte client
+---
 
-Profil
+# 5. Pages compte client
 
+## Profil
+
+```text
 Sidebar compte
 ├── Profil
 ├── Mes commandes
@@ -614,149 +491,118 @@ Informations
 ├── Email
 ├── Téléphone
 └── Date de naissance
+```
 
-Mes commandes
+## Mes commandes
 
 Afficher :
 
-Numéro de commande
-
-Date
-
-Produits
-
-Total
-
-Paiement
-
-Statut
-
-Bouton détails
-
-Bouton suivi
-
-Facture PDF
+- Numéro de commande
+- Date
+- Produits
+- Total
+- Paiement
+- Statut
+- Bouton détails
+- Bouton suivi
+- Facture PDF
 
 Statuts :
 
+```text
 En attente
 Confirmée
 En préparation
 Expédiée
 Livrée
 Annulée
+```
 
-Mes adresses
+## Mes adresses
 
 Fonctionnalités :
 
-Ajouter une adresse
+- Ajouter une adresse
+- Modifier
+- Supprimer
+- Définir comme principale
+- Adresse de livraison
+- Adresse de facturation
 
-Modifier
-
-Supprimer
-
-Définir comme principale
-
-Adresse de livraison
-
-Adresse de facturation
-
-Mes favoris
+## Mes favoris
 
 Afficher tous les produits favoris avec :
 
-Image
+- Image
+- Nom
+- Prix
+- Disponibilité
+- Ajouter au panier
+- Supprimer des favoris
 
-Nom
+## Sécurité
 
-Prix
+- Modifier mot de passe
+- Authentification 2FA
+- Sessions actives
+- Appareils connectés
+- Déconnexion de toutes les sessions
 
-Disponibilité
+---
 
-Ajouter au panier
+# 6. Admin Dashboard
 
-Supprimer des favoris
+## Tableau de bord
 
-Sécurité
+### Statistiques
 
-Modifier mot de passe
-
-Authentification 2FA
-
-Sessions actives
-
-Appareils connectés
-
-Déconnexion de toutes les sessions
-
-6. Admin Dashboard
-
-Tableau de bord
-
-Statistiques
-
+```text
 Total commandes
 Total clients
 Produits vendus
 Chiffre d'affaires
+```
 
-Graphiques
+### Graphiques
 
-Évolution des ventes
+- Évolution des ventes
+- Ventes par canal
+- Commandes par statut
+- Produits les plus vendus
 
-Ventes par canal
-
-Commandes par statut
-
-Produits les plus vendus
-
-Dernières commandes
+### Dernières commandes
 
 Afficher :
 
-ID
+- ID
+- Client
+- Produits
+- Montant
+- Statut
+- Date
 
-Client
+---
 
-Produits
-
-Montant
-
-Statut
-
-Date
-
-7. Admin — Commandes
+# 7. Admin — Commandes
 
 Fonctions :
 
-Recherche
-
-Filtrage
-
-Pagination
-
-Export CSV / Excel
-
-Voir détails
-
-Changer statut
-
-Confirmer commande
-
-Préparer commande
-
-Marquer expédiée
-
-Marquer livrée
-
-Annuler
-
-Voir facture
+- Recherche
+- Filtrage
+- Pagination
+- Export CSV / Excel
+- Voir détails
+- Changer statut
+- Confirmer commande
+- Préparer commande
+- Marquer expédiée
+- Marquer livrée
+- Annuler
+- Voir facture
 
 Colonnes :
 
+```text
 Commande
 Client
 Produits
@@ -765,33 +611,28 @@ Paiement
 Statut
 Date
 Actions
+```
 
-8. Admin — Produits
+---
+
+# 8. Admin — Produits
 
 Fonctions :
 
-Ajouter produit
-
-Modifier produit
-
-Supprimer produit
-
-Upload images
-
-Gestion stock
-
-Catégories
-
-Promotions
-
-Recherche
-
-Filtres
-
-Pagination
+- Ajouter produit
+- Modifier produit
+- Supprimer produit
+- Upload images
+- Gestion stock
+- Catégories
+- Promotions
+- Recherche
+- Filtres
+- Pagination
 
 Champs produit :
 
+```text
 Nom
 Slug
 SKU
@@ -808,47 +649,50 @@ Stock
 Images
 Statut
 Promotion
+```
 
-9. Admin — Catégories
+---
+
+# 9. Admin — Catégories
 
 Champs :
 
+```text
 Nom
 Slug
 Description
 Image
 Statut
+```
 
 Actions :
 
+```text
 Ajouter
 Modifier
 Supprimer
 Activer
 Désactiver
+```
 
 Exemples :
 
-Chaussures
+- Chaussures
+- Accessoires
+- Vêtements Homme
+- Vêtements Femme
+- Lunettes
+- Montres
+- Casquettes
+- Bijoux
 
-Accessoires
+---
 
-Vêtements Homme
-
-Vêtements Femme
-
-Lunettes
-
-Montres
-
-Casquettes
-
-Bijoux
-
-10. Admin — Clients
+# 10. Admin — Clients
 
 Afficher :
 
+```text
 Client
 Email
 Téléphone
@@ -857,30 +701,32 @@ Total commandes
 Montant dépensé
 Statut
 Date d'inscription
+```
 
 Actions :
 
-Voir profil
+- Voir profil
+- Voir commandes
+- Désactiver
+- Bloquer
+- Réactiver
 
-Voir commandes
+---
 
-Désactiver
-
-Bloquer
-
-Réactiver
-
-11. Admin — Promotions
+# 11. Admin — Promotions
 
 Types :
 
+```text
 Pourcentage
 Montant fixe
 Livraison gratuite
 Code promo
+```
 
 Champs :
 
+```text
 Nom
 Code
 Type
@@ -892,50 +738,48 @@ Nombre maximum d'utilisations
 Produits concernés
 Catégories concernées
 Statut
+```
 
-12. Admin — Analyses
+---
+
+# 12. Admin — Analyses
 
 Statistiques :
 
-Chiffre d'affaires
-
-Taux de conversion
-
-Panier moyen
-
-Visiteurs
-
-Nombre de commandes
-
-Clients
-
-Produits vendus
+- Chiffre d'affaires
+- Taux de conversion
+- Panier moyen
+- Visiteurs
+- Nombre de commandes
+- Clients
+- Produits vendus
 
 Graphiques :
 
-Évolution des ventes
-
-Sources de trafic
-
-Ventes par catégorie
-
-Produits les plus performants
-
-Répartition mobile / desktop / tablette
+- Évolution des ventes
+- Sources de trafic
+- Ventes par catégorie
+- Produits les plus performants
+- Répartition mobile / desktop / tablette
 
 Filtres :
 
+```text
 Aujourd'hui
 7 derniers jours
 30 derniers jours
 Ce mois
 Cette année
 Période personnalisée
+```
 
-13. Admin — Messages
+---
+
+# 13. Admin — Messages
 
 Structure :
 
+```text
 Liste conversations
 ├── Tous
 ├── Non lus
@@ -956,66 +800,80 @@ Informations client
 ├── Total commandes
 ├── Total dépensé
 └── Activité récente
+```
 
 Fonctions :
 
-Envoyer message
+- Envoyer message
+- Archiver conversation
+- Marquer résolu
+- Marquer non lu
+- Ajouter tags
 
-Archiver conversation
+---
 
-Marquer résolu
+# 14. Admin — Paramètres
 
-Marquer non lu
+## Informations boutique
 
-Ajouter tags
-
-14. Admin — Paramètres
-
-Informations boutique
-
+```text
 Nom boutique
 Email
 Téléphone
 Adresse
 Devise
 Langue
+```
 
-Préférences
+## Préférences
 
+```text
 Notifications email
 Mode maintenance
 Affichage stock
 Fuseau horaire
+```
 
-Sécurité
+## Sécurité
 
+```text
 Mot de passe
 2FA
 Sessions actives
 Appareils connectés
+```
 
-Livraison
+## Livraison
 
+```text
 Livraison standard
 Livraison express
 Livraison gratuite à partir de X DH
+```
 
-Paiements
+## Paiements
 
+```text
 Carte bancaire
 PayPal
 Paiement à la livraison
+```
 
-Système
+## Système
 
+```text
 Sauvegarde
 Clé API
 Centre d'aide
+```
 
-15. Admin — Profil
+---
+
+# 15. Admin — Profil
 
 Informations :
 
+```text
 Photo
 Prénom
 Nom
@@ -1025,25 +883,33 @@ Poste
 Adresse
 Langue
 Fuseau horaire
+```
 
 Sécurité :
 
+```text
 Modifier mot de passe
 2FA
 Sessions
 Appareils
+```
 
 Statistiques :
 
+```text
 Commandes gérées
 Produits ajoutés
 Messages traités
 Dernière connexion
+```
 
-16. Structure de la base MySQL
+---
 
-users
+# 16. Structure de la base MySQL
 
+## users
+
+```sql
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(100),
@@ -1058,9 +924,11 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+```
 
-categories
+## categories
 
+```sql
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
@@ -1071,9 +939,11 @@ CREATE TABLE categories (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+```
 
-products
+## products
 
+```sql
 CREATE TABLE products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     category_id INT,
@@ -1093,9 +963,11 @@ CREATE TABLE products (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
+```
 
-product_images
+## product_images
 
+```sql
 CREATE TABLE product_images (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
@@ -1104,9 +976,11 @@ CREATE TABLE product_images (
     sort_order INT DEFAULT 0,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+```
 
-product_variants
+## product_variants
 
+```sql
 CREATE TABLE product_variants (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
@@ -1117,9 +991,11 @@ CREATE TABLE product_variants (
     additional_price DECIMAL(10,2) DEFAULT 0,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+```
 
-addresses
+## addresses
 
+```sql
 CREATE TABLE addresses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -1134,9 +1010,11 @@ CREATE TABLE addresses (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+```
 
-favorites
+## favorites
 
+```sql
 CREATE TABLE favorites (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -1146,9 +1024,11 @@ CREATE TABLE favorites (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+```
 
-carts
+## carts
 
+```sql
 CREATE TABLE carts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -1157,9 +1037,11 @@ CREATE TABLE carts (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+```
 
-cart_items
+## cart_items
 
+```sql
 CREATE TABLE cart_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     cart_id INT NOT NULL,
@@ -1171,9 +1053,11 @@ CREATE TABLE cart_items (
     FOREIGN KEY (product_id) REFERENCES products(id),
     FOREIGN KEY (variant_id) REFERENCES product_variants(id)
 );
+```
 
-orders
+## orders
 
+```sql
 CREATE TABLE orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     order_number VARCHAR(50) UNIQUE NOT NULL,
@@ -1200,9 +1084,11 @@ CREATE TABLE orders (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (address_id) REFERENCES addresses(id)
 );
+```
 
-order_items
+## order_items
 
+```sql
 CREATE TABLE order_items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
@@ -1214,9 +1100,11 @@ CREATE TABLE order_items (
     total DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE
 );
+```
 
-promotions
+## promotions
 
+```sql
 CREATE TABLE promotions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
@@ -1231,9 +1119,11 @@ CREATE TABLE promotions (
     status ENUM('active','inactive','expired','scheduled') DEFAULT 'active',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
-promotion_products
+## promotion_products
 
+```sql
 CREATE TABLE promotion_products (
     promotion_id INT,
     product_id INT,
@@ -1241,9 +1131,11 @@ CREATE TABLE promotion_products (
     FOREIGN KEY (promotion_id) REFERENCES promotions(id) ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
+```
 
-reviews
+## reviews
 
+```sql
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -1255,9 +1147,11 @@ CREATE TABLE reviews (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+```
 
-conversations
+## conversations
 
+```sql
 CREATE TABLE conversations (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -1266,9 +1160,11 @@ CREATE TABLE conversations (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+```
 
-messages
+## messages
 
+```sql
 CREATE TABLE messages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     conversation_id INT NOT NULL,
@@ -1280,18 +1176,24 @@ CREATE TABLE messages (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (conversation_id) REFERENCES conversations(id) ON DELETE CASCADE
 );
+```
 
-settings
+## settings
 
+```sql
 CREATE TABLE settings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     setting_key VARCHAR(150) UNIQUE NOT NULL,
     setting_value TEXT,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+```
 
-17. Relations principales
+---
 
+# 17. Relations principales
+
+```text
 users
 ├── addresses
 ├── orders
@@ -1317,15 +1219,21 @@ promotions
 
 conversations
 └── messages
+```
 
-18. API REST Express
+---
+
+# 18. API REST Express
 
 URL de base :
 
+```text
 http://localhost:5000/api
+```
 
-Auth
+## Auth
 
+```http
 POST   /api/auth/register
 POST   /api/auth/login
 POST   /api/auth/logout
@@ -1333,97 +1241,123 @@ GET    /api/auth/me
 POST   /api/auth/forgot-password
 POST   /api/auth/reset-password
 PUT    /api/auth/password
+```
 
-Produits
+## Produits
 
+```http
 GET    /api/products
 GET    /api/products/:id
 GET    /api/products/slug/:slug
 POST   /api/products
 PUT    /api/products/:id
 DELETE /api/products/:id
+```
 
-Catégories
+## Catégories
 
+```http
 GET    /api/categories
 GET    /api/categories/:id
 POST   /api/categories
 PUT    /api/categories/:id
 DELETE /api/categories/:id
+```
 
-Panier
+## Panier
 
+```http
 GET    /api/cart
 POST   /api/cart/items
 PUT    /api/cart/items/:id
 DELETE /api/cart/items/:id
 DELETE /api/cart
+```
 
-Commandes
+## Commandes
 
+```http
 GET    /api/orders
 GET    /api/orders/:id
 POST   /api/orders
 PUT    /api/orders/:id/status
 DELETE /api/orders/:id
+```
 
-Adresses
+## Adresses
 
+```http
 GET    /api/addresses
 POST   /api/addresses
 PUT    /api/addresses/:id
 DELETE /api/addresses/:id
 PUT    /api/addresses/:id/default
+```
 
-Favoris
+## Favoris
 
+```http
 GET    /api/favorites
 POST   /api/favorites/:productId
 DELETE /api/favorites/:productId
+```
 
-Promotions
+## Promotions
 
+```http
 GET    /api/promotions
 POST   /api/promotions
 PUT    /api/promotions/:id
 DELETE /api/promotions/:id
 POST   /api/promotions/validate
+```
 
-Clients / utilisateurs
+## Clients / utilisateurs
 
+```http
 GET    /api/users
 GET    /api/users/:id
 PUT    /api/users/:id
 PUT    /api/users/:id/status
 DELETE /api/users/:id
+```
 
-Messages
+## Messages
 
+```http
 GET    /api/conversations
 GET    /api/conversations/:id
 POST   /api/conversations
 POST   /api/conversations/:id/messages
 PUT    /api/conversations/:id/status
+```
 
-Analyses
+## Analyses
 
+```http
 GET /api/analytics/dashboard
 GET /api/analytics/sales
 GET /api/analytics/categories
 GET /api/analytics/products
 GET /api/analytics/customers
+```
 
-Paramètres
+## Paramètres
 
+```http
 GET /api/settings
 PUT /api/settings
+```
 
-19. Authentification
+---
+
+# 19. Authentification
 
 Utiliser JWT.
 
 Exemple de réponse après connexion :
 
+```json
 {
   "user": {
     "id": 1,
@@ -1434,20 +1368,28 @@ Exemple de réponse après connexion :
   },
   "token": "JWT_TOKEN"
 }
+```
 
 Envoyer le token :
 
+```http
 Authorization: Bearer JWT_TOKEN
+```
 
 Routes admin protégées avec :
 
+```text
 authMiddleware
 adminMiddleware
+```
 
-20. Variables .env
+---
 
-Backend
+# 20. Variables `.env`
 
+## Backend
+
+```env
 PORT=5000
 NODE_ENV=development
 
@@ -1466,73 +1408,107 @@ SMTP_HOST=
 SMTP_PORT=
 SMTP_USER=
 SMTP_PASSWORD=
+```
 
-Frontend
+## Frontend
 
+```env
 VITE_API_URL=http://localhost:5000/api
+```
 
-21. Installation
+---
 
-Cloner le projet
+# 21. Installation
 
+## Cloner le projet
+
+```bash
 git clone https://github.com/yourusername/nova-ecommerce.git
 cd nova-ecommerce
+```
 
-Installer frontend
+## Installer frontend
 
+```bash
 cd client
 npm install
 npm run dev
+```
 
 Frontend :
 
+```text
 http://localhost:5173
+```
 
-Installer backend
+## Installer backend
 
+```bash
 cd server
 npm install
 npm run dev
+```
 
 Backend :
 
+```text
 http://localhost:5000
+```
 
-22. Packages frontend
+---
 
+# 22. Packages frontend
+
+```bash
 npm install react-router-dom axios
 npm install lucide-react
 npm install react-hot-toast
 npm install recharts
+```
 
 Optionnel :
 
+```bash
 npm install @reduxjs/toolkit react-redux
+```
 
-23. Packages backend
+---
 
+# 23. Packages backend
+
+```bash
 npm install express mysql2 cors dotenv bcrypt jsonwebtoken
 npm install multer nodemailer express-validator cookie-parser
+```
 
 Développement :
 
+```bash
 npm install -D nodemon
+```
 
-24. Scripts backend
+---
 
-Dans server/package.json :
+# 24. Scripts backend
 
+Dans `server/package.json` :
+
+```json
 {
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   }
 }
+```
 
-25. Scripts frontend
+---
 
-Dans client/package.json :
+# 25. Scripts frontend
 
+Dans `client/package.json` :
+
+```json
 {
   "scripts": {
     "dev": "vite",
@@ -1540,11 +1516,15 @@ Dans client/package.json :
     "preview": "vite preview"
   }
 }
+```
 
-26. Style visuel NOVA
+---
+
+# 26. Style visuel NOVA
 
 Palette recommandée :
 
+```css
 :root {
     --nova-green: #3f493b;
     --nova-green-dark: #293127;
@@ -1565,16 +1545,22 @@ Palette recommandée :
     --radius-md: 14px;
     --radius-lg: 20px;
 }
+```
 
 Fonts recommandées :
 
+```text
 Titres : Playfair Display / Cormorant Garamond
 Interface : Inter / Poppins / Helvetica
+```
 
-27. Responsive
+---
+
+# 27. Responsive
 
 Breakpoints :
 
+```css
 /* Mobile */
 @media (max-width: 576px) {}
 
@@ -1583,59 +1569,51 @@ Breakpoints :
 
 /* Laptop */
 @media (max-width: 1200px) {}
+```
 
 Le site doit être optimisé pour :
 
-Mobile
+- Mobile
+- Tablette
+- Desktop
+- Grand écran
 
-Tablette
+---
 
-Desktop
-
-Grand écran
-
-28. Sécurité
+# 28. Sécurité
 
 À prévoir :
 
-Hash des mots de passe avec bcrypt
-
-JWT
-
-Validation serveur
-
-Protection des routes admin
-
-Limitation des requêtes
-
-Helmet
-
-CORS
-
-Requêtes SQL préparées
-
-Validation des uploads
-
-Taille maximale des fichiers
-
-Types d'images autorisés
-
-Protection XSS
-
-Protection CSRF si authentification par cookie
-
-Ne jamais stocker les informations complètes d'une carte bancaire
+- Hash des mots de passe avec bcrypt
+- JWT
+- Validation serveur
+- Protection des routes admin
+- Limitation des requêtes
+- Helmet
+- CORS
+- Requêtes SQL préparées
+- Validation des uploads
+- Taille maximale des fichiers
+- Types d'images autorisés
+- Protection XSS
+- Protection CSRF si authentification par cookie
+- Ne jamais stocker les informations complètes d'une carte bancaire
 
 Packages supplémentaires :
 
+```bash
 npm install helmet express-rate-limit
+```
 
-29. Paiement
+---
+
+# 29. Paiement
 
 Pour une vraie boutique, utiliser un prestataire de paiement.
 
 Architecture :
 
+```text
 Checkout
     ↓
 Express API
@@ -1647,16 +1625,22 @@ Webhook
 Mise à jour payment_status
     ↓
 Confirmation commande
+```
 
 Ne jamais sauvegarder :
 
+```text
 Numéro complet de carte
 CVC
+```
 
 dans MySQL.
 
-30. Workflow commande
+---
 
+# 30. Workflow commande
+
+```text
 Client ajoute au panier
         ↓
 Client passe au checkout
@@ -1676,9 +1660,13 @@ En préparation
 Expédiée
         ↓
 Livrée
+```
 
-31. Workflow admin produit
+---
 
+# 31. Workflow admin produit
+
+```text
 Admin
   ↓
 Produits
@@ -1698,11 +1686,15 @@ Stock
 Catégorie
   ↓
 Enregistrer
+```
 
-32. Composants React réutilisables
+---
+
+# 32. Composants React réutilisables
 
 Créer des composants réutilisables :
 
+```text
 Button
 Input
 Select
@@ -1726,24 +1718,30 @@ ConfirmDialog
 Toast
 EmptyState
 Loader
+```
 
-33. États globaux
+---
 
-AuthContext
+# 33. États globaux
+
+## AuthContext
 
 Stocker :
 
+```text
 user
 token
 isAuthenticated
 login()
 logout()
 register()
+```
 
-CartContext
+## CartContext
 
 Stocker :
 
+```text
 cart
 cartItems
 cartCount
@@ -1753,18 +1751,24 @@ addToCart()
 removeFromCart()
 updateQuantity()
 clearCart()
+```
 
-WishlistContext
+## WishlistContext
 
 Stocker :
 
+```text
 favorites
 addFavorite()
 removeFavorite()
 isFavorite()
+```
 
-34. Exemple de router React
+---
 
+# 34. Exemple de router React
+
+```jsx
 <Routes>
   <Route path="/" element={<Home />} />
   <Route path="/nouveautes" element={<NewArrivals />} />
@@ -1799,11 +1803,15 @@ isFavorite()
     <Route path="/admin/profil" element={<AdminProfile />} />
   </Route>
 </Routes>
+```
 
-35. Exemple de connexion MySQL
+---
 
-server/src/config/db.js
+# 35. Exemple de connexion MySQL
 
+`server/src/config/db.js`
+
+```js
 const mysql = require("mysql2/promise");
 
 const pool = mysql.createPool({
@@ -1818,11 +1826,15 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
+```
 
-36. Exemple Express
+---
 
-server/src/app.js
+# 36. Exemple Express
 
+`server/src/app.js`
+
+```js
 const express = require("express");
 const cors = require("cors");
 
@@ -1847,11 +1859,15 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/orders", orderRoutes);
 
 module.exports = app;
+```
 
-37. MVP conseillé
+---
+
+# 37. MVP conseillé
 
 Commencer dans cet ordre :
 
+```text
 1. Base MySQL
 2. Express API
 3. Authentification
@@ -1871,53 +1887,39 @@ Commencer dans cet ordre :
 17. Messages
 18. Analyses
 19. Paramètres
+```
 
-38. Objectif final
+---
+
+# 38. Objectif final
 
 L'application NOVA doit permettre :
 
-Client
+### Client
+- découvrir les collections ;
+- filtrer les produits ;
+- consulter les détails ;
+- ajouter au panier ;
+- ajouter aux favoris ;
+- commander ;
+- choisir la livraison ;
+- effectuer un paiement ;
+- gérer son profil ;
+- suivre ses commandes.
 
-découvrir les collections ;
+### Administrateur
+- suivre les performances ;
+- gérer les commandes ;
+- gérer les produits ;
+- gérer les catégories ;
+- gérer les clients ;
+- créer des promotions ;
+- consulter les analyses ;
+- répondre aux messages ;
+- gérer les paramètres de la boutique.
 
-filtrer les produits ;
+---
 
-consulter les détails ;
+## NOVA
 
-ajouter au panier ;
-
-ajouter aux favoris ;
-
-commander ;
-
-choisir la livraison ;
-
-effectuer un paiement ;
-
-gérer son profil ;
-
-suivre ses commandes.
-
-Administrateur
-
-suivre les performances ;
-
-gérer les commandes ;
-
-gérer les produits ;
-
-gérer les catégories ;
-
-gérer les clients ;
-
-créer des promotions ;
-
-consulter les analyses ;
-
-répondre aux messages ;
-
-gérer les paramètres de la boutique.
-
-NOVA
-
-Plus qu'un style, un art de vivre.
+> Plus qu'un style, un art de vivre.
