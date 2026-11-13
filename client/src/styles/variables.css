@@ -1,0 +1,19 @@
+:root {
+  --font-logo: "Bodoni Moda", Georgia, serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --color-page: #fbfaf6;
+  --color-surface: #f8f5ee;
+  --color-cream: #efe7db;
+  --color-cream-soft: #f4efe7;
+  --color-olive: #66725d;
+  --color-ink: #111111;
+  --color-muted: #6e6b64;
+  --color-faint: #dfdbd2;
+  --color-line: #e8e2d8;
+  --color-gold: #c7a14a;
+
+  --container-width: 1018px;
+  --radius-small: 5px;
+}

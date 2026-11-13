@@ -1,0 +1,2 @@
+-- Seed data intentionally omitted.
+-- Create users through POST /api/auth/register so passwords are hashed with bcrypt.
